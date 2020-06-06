@@ -32,4 +32,4 @@ jobs:
       - name: Install Surge
         run: npm install --global surge
       - name: Deploying on Surge
-        run: surge ./bootcamp2020-react ./build http://bootcamp-react.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./bootcamp2020-react ./build http://finiky-haircut.surge.sh --token ${{secrets.SURGE_TOKEN}}

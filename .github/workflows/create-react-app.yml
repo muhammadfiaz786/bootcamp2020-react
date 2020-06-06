@@ -24,8 +24,9 @@ jobs:
     - name: Install NodeJS
       uses: actions/setup-node@v2-beta
       with:
-        node-version: 12 
-
+        node-version: 12
+    # Runs a set of commands using the runners shell
+    - name: Install Yarn  
     - uses: borales/actions-yarn@v2.0.0
       with:
         cmd: install # will run 'yarn install' command
@@ -37,4 +38,4 @@ jobs:
       run: npm install -g surge
     
     - name: Deploying on Surge
-      run: surge ./build http://bootcamp-react.surge.sh --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./build bootcamp-react.surge.sh --token ${{secrets.SURGE_TOKEN}}
